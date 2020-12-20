@@ -1,0 +1,66 @@
+{
+    "name": "Status Page Plugin",
+    "description": "A status page plugin for crisp",
+    "hookFile": "hook.php",
+    "author": "Justin René Back <jback@pixelcatproductions.net>",
+    "onInstall": {
+        "createTranslationKeys": {
+            "en": {
+                "title": "ToS;DR Status",
+                "jumbotron_paragraph_1": "Here you can see if any of our service is offline",
+                "status": "Status",
+                "visit": "Visit {{ service }}",
+                "last_ping": "Last Ping: {{ ping }}ms"
+            }
+        },
+        "createKVStorageItems": {
+            "services": [{
+                    "id": "tosback",
+                    "name": "TosBack",
+                    "url": "https://tosback.org",
+                    "port": "443",
+                    "address": "tosback.org",
+                    "type": "https"
+                }, {
+                    "id": "forum",
+                    "name": "ToS;DR Forum",
+                    "url": "https://forum.tosdr.org",
+                    "port": "443",
+                    "address": "forum.tosdr.org",
+                    "type": "https"
+                }, {
+                    "id": "frontpage",
+                    "name": "tosdr.org",
+                    "url": "https://tosdr.org",
+                    "port": "443",
+                    "address": "tosdr.org",
+                    "type": "https"
+                }, {
+                    "id": "crispapi",
+                    "name": "Crisp API",
+                    "url": "https://beta.tosdr.org/api/?page=api",
+                    "port": "443",
+                    "address": "beta.tosdr.org/api/1/all.json",
+                    "type": "https"
+                }, {
+                    "id": "phoenix",
+                    "name": "Phoenix",
+                    "url": "https://edit.tosdr.org",
+                    "port": "443",
+                    "address": "edit.tosdr.org",
+                    "type": "https"
+                }],
+            "tosback": {},
+            "forum": {},
+            "frontpage": {},
+            "crispapi": {},
+            "phoenix": {}
+        },
+        "activateDependencies": []
+    },
+    "onUninstall": {
+        "deleteData": true,
+        "deactivateDependencies": [],
+        "purgeDependencies": []
+    }
+}
