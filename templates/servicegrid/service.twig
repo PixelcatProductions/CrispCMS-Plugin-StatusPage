@@ -16,6 +16,16 @@
 #}
 
 {% set ServiceData = plugin.getConfig(service.id) %}
+{% if ServiceData.code matches '/^2.*/' %}
+    {% set Badge = '<span class="badge badge-success">HTTP '~ ServiceData.code ~'</span>' %}
+    {% set Online = '<span class="badge badge-success">ONLINE</span>' %}
+{% elseif ServiceData.code matches '/^4.*/' %}
+    {% set Badge = '<span class="badge badge-warning">HTTP '~ ServiceData.code ~'</span>' %}
+    {% set Online = '<span class="badge badge-warning">WARNING</span>' %}
+{% elseif ServiceData.code matches '/^5.*/' %}
+    {% set Badge = '<span class="badge badge-danger">HTTP '~ ServiceData.code ~'</span>' %}
+    {% set Online = '<span class="badge badge-danger">OFFLINE</span>' %}
+{% endif %}
 
 <div class="col-{{ col }}">
     <div class="card h-100">
@@ -26,14 +36,13 @@
             <div class="card-text mb-2">
                 <div class="row">
                     <div class="col-2">
-                        {% if ServiceData.online %}
-                            <span class="badge badge-success">ONLINE</span>
-                        {% else %}
-                            <span class="badge badge-danger">OFFLINE</span>
-                        {% endif %}
+                        {{ Online|raw }}
                     </div>
-                    <div class="col-10">
-                        {{ plugin.getTranslation('last_ping', 1, {"{{ ping }}": ServiceData.ping}) }}
+                    <div class="col-8">
+                        {{ plugin.getTranslation('last_ping', 1, {"{{ ping }}": ServiceData.ping|truncateText(4, false)}) }}
+                    </div>
+                    <div class="col-2">
+                        {{ Badge|raw }}
                     </div>
                 </div>
             </div>
