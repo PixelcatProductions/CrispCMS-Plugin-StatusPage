@@ -22,10 +22,3 @@
 if (CURRENT_UNIVERSE >= crisp\Universe::UNIVERSE_BETA) {
     \crisp\core\Template::addtoNavbar("status", $this->getTranslation("status"). ' <sup class="badge badge-warning"><i class="fas fa-flask"></i> BETA</sup>', "/status", "_self", 50);
 }
-
-
-$this->registerInstallHook(function() {
-    foreach ($this->getConfig("services") as $Service) {
-        $this->createCron("check_service", $Service->id, "2 MINUTE");
-    }
-});

@@ -56,7 +56,28 @@
             "crispapi": {},
             "phoenix": {}
         },
-        "activateDependencies": []
+        "activateDependencies": [],
+        "createCron": [{
+                "type": "check_service",
+                "data": "tosback",
+                "interval": "2 MINUTE"
+            }, {
+                "type": "check_service",
+                "data": "forum",
+                "interval": "2 MINUTE"
+            }, {
+                "type": "check_service",
+                "data": "frontpage",
+                "interval": "2 MINUTE"
+            }, {
+                "type": "check_service",
+                "data": "crispapi",
+                "interval": "2 MINUTE"
+            }, {
+                "type": "check_service",
+                "data": "phoenix",
+                "interval": "2 MINUTE"
+            }]
     },
     "onUninstall": {
         "deleteData": true,
