@@ -1,6 +1,10 @@
 {
     "name": "Status Page Plugin",
+    "version": "1.0.0",
+    "testedVersion": ">=0.0.7",
+    "incompatibleVersion": "<0.0.7",
     "description": "A status page plugin for crisp",
+    "repository": "https://github.com/PixelcatProductions/CrispCMS-Plugin-StatusPage",
     "hookFile": "hook.php",
     "author": "Justin René Back <jback@pixelcatproductions.net>",
     "onInstall": {
