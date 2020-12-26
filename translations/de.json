@@ -1,1 +1,7 @@
-{}
+{
+    "status": "Status",
+    "visit": "Besuchen Sie {{ service }}",
+    "last_ping": "Letzter Ping: {{ ping }}ms",
+    "title": "ToS;DR Status",
+    "jumbotron_paragraph_1": "Hier können Sie sehen, ob einer unserer Dienste offline ist"
+}
