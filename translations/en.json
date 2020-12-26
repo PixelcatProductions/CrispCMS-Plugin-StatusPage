@@ -1,0 +1,7 @@
+{
+    "title": "ToS;DR Status",
+    "jumbotron_paragraph_1": "Here you can see if any of our services are offline",
+    "status": "Status",
+    "visit": "Visit {{ service }}",
+    "last_ping": "Last Ping: {{ ping }}ms"
+}

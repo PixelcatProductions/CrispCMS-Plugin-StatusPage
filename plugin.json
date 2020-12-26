@@ -1,22 +1,14 @@
 {
     "name": "Status Page Plugin",
-    "version": "1.0.0",
-    "testedVersion": ">=0.0.7",
-    "incompatibleVersion": "<0.0.7",
+    "version": "1.0.1",
+    "testedVersion": ">=0.0.8-beta.RC4",
+    "incompatibleVersion": "<0.0.8-beta.RC4",
     "description": "A status page plugin for crisp",
     "repository": "https://github.com/PixelcatProductions/CrispCMS-Plugin-StatusPage",
     "hookFile": "hook.php",
     "author": "Justin René Back <jback@pixelcatproductions.net>",
     "onInstall": {
-        "createTranslationKeys": {
-            "en": {
-                "title": "ToS;DR Status",
-                "jumbotron_paragraph_1": "Here you can see if any of our services are offline",
-                "status": "Status",
-                "visit": "Visit {{ service }}",
-                "last_ping": "Last Ping: {{ ping }}ms"
-            }
-        },
+        "createTranslationKeys": "translations/",
         "createKVStorageItems": {
             "services": [{
                     "id": "tosback",
