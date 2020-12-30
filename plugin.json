@@ -1,6 +1,6 @@
 {
     "name": "Status Page Plugin",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "testedVersion": ">=0.0.8-beta.RC4",
     "incompatibleVersion": "<0.0.8-beta.RC4",
     "description": "A status page plugin for crisp",

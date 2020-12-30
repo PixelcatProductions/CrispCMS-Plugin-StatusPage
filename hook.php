@@ -20,5 +20,5 @@
 /** @var crisp\core\Plugin $this */
 /** @var crisp\core\Plugin $_parent */
 if (CURRENT_UNIVERSE >= crisp\Universe::UNIVERSE_BETA) {
-    \crisp\core\Theme::addtoNavbar("status", $this->getTranslation("status"). ' <sup class="badge badge-warning"><i class="fas fa-flask"></i> BETA</sup>', "/status", "_self", 50);
+    \crisp\core\Theme::addtoNavbar("status", $this->getTranslation("status"), "/status", "_self", 50);
 }

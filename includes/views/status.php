@@ -1,6 +1,6 @@
 <?php
 
-$Target = crisp\Universe::UNIVERSE_BETA;
+$Target = crisp\Universe::UNIVERSE_PUBLIC;
 
 if (CURRENT_UNIVERSE < $Target) {
     http_response_code(424);
