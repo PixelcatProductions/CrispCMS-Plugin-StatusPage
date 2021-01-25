@@ -1,1 +1,7 @@
-{}
+{
+    "title": "Stan ToS;DR",
+    "jumbotron_paragraph_1": "Tutaj możesz sprawdzić stan naszych usług",
+    "status": "Stan",
+    "visit": "Odwiedź {{ service }}",
+    "last_ping": "Ostatnie opóźnienie: {{ ping }}ms"
+}
